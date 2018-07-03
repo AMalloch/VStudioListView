@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="25"
-        android:id="@+id/txtName"
+        android:id="@+id/txtFirstName"
         android:paddingLeft="5dp"
         android:paddingBottom="2dp" />
     <TextView
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="25"
-        android:id="@+id/txtName"
+        android:id="@+id/txtLastName"
         android:paddingLeft="5dp"
         android:paddingBottom="2dp" />
     <TextView
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="25"
-        android:id="@+id/txtName"
+        android:id="@+id/txtAge"
         android:paddingLeft="5dp"
         android:paddingBottom="2dp" />
     <TextView
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="25"
-        android:id="@+id/txtName"
+        android:id="@+id/txtGender"
         android:paddingLeft="5dp"
         android:paddingBottom="2dp" />
 </LinearLayout>
