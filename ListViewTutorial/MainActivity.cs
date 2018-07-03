@@ -10,7 +10,7 @@ namespace ListViewTutorial
     public class MainActivity : AppCompatActivity
     {
 
-        private List<string> mItems;
+        private List<Person> mItems;
         private ListView mListView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -22,7 +22,7 @@ namespace ListViewTutorial
 
             mListView = FindViewById<ListView>(Resource.Id.myListView);
 
-            mItems = new List<string>();
+            mItems = new List<Person>();
 
             mItems.Add("Angus");  
             mItems.Add("Heather");
