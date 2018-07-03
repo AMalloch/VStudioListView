@@ -24,22 +24,32 @@ namespace ListViewTutorial
 
             mItems = new List<Person>();
 
-            mItems.Add(new Person() { FirstName = "Angus", LastName = "Malloch", Age = "31", Gender = "Male" });  
-            mItems.Add(new Person() { FirstName = "Heather", LastName = "Malloch", Age = "33", Gender = "Female" });  
-            mItems.Add(new Person() { FirstName = "Bonzo", LastName = "McBonzo", Age = "50", Gender = "Male" });  
+            mItems.Add(new Person() { FirstName = "Angus", LastName = "Malloch", Age = "31", Gender = "Male" });
+            mItems.Add(new Person() { FirstName = "Heather", LastName = "Malloch", Age = "33", Gender = "Female" });
+            mItems.Add(new Person() { FirstName = "Bonzo", LastName = "McBonzo", Age = "50", Gender = "Male" });
 
             // ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
             MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
 
             mListView.Adapter = adapter;
             mListView.ItemClick += MListView_ItemClick;
+            mListView.ItemLongClick += MListView_ItemLongClick;
+            mListView.ItemClick += MListView_ItemClick2;
 
-        }
+            void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+            {
+                System.Console.WriteLine(mItems[e.Position].FirstName);
+            }
 
-        private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            System.Console.WriteLine(mItems[e.Position].FirstName);
+            void MListView_ItemClick2(object sender, AdapterView.ItemClickEventArgs e)
+            {
+                System.Console.Write("Multi Trigger");
+            }
+
+            void MListView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
+            {
+                System.Console.WriteLine(mItems[e.Position].LastName);
+            }
         }
     }
 }
-
