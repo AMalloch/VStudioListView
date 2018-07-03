@@ -32,6 +32,13 @@ namespace ListViewTutorial
             MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
 
             mListView.Adapter = adapter;
+            mListView.ItemClick += MListView_ItemClick;
+
+        }
+
+        private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            System.Console.WriteLine(mItems[e.Position].FirstName);
         }
     }
 }
