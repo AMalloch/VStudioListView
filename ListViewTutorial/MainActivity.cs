@@ -24,9 +24,10 @@ namespace ListViewTutorial
 
             mItems = new List<Person>();
 
-            mItems.Add("Angus");  
-            mItems.Add("Heather");
-            mItems.Add("Bonzo");
+            mItems.Add(new Person() { FirstName = "Angus", LastName = "Malloch", Age = "31", Gender = "Male" });  
+            mItems.Add(new Person() { FirstName = "Heather", LastName = "Malloch", Age = "33", Gender = "Female" });  
+            mItems.Add(new Person() { FirstName = "Bonzo", LastName = "McBonzo", Age = "50", Gender = "Male" });  
+
             // ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
             MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
 

@@ -41,11 +41,11 @@ namespace ListViewTutorial
         {
             View row = convertView;
 
-            if( row == null)
+            if (row == null)
             {
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listview_row, null, false);
             }
-             
+
             TextView txtFirstName = row.FindViewById<TextView>(Resource.Id.txtFirstName);
             txtFirstName.Text = mItems[position].FirstName;
 
@@ -59,6 +59,6 @@ namespace ListViewTutorial
             txtGender.Text = mItems[position].Gender;
 
             return row;
-        } 
-     
+        }
+    }
 } 
